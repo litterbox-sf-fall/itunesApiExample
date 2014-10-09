@@ -1,0 +1,20 @@
+{
+  "name": "expressApp",
+  "version": "0.0.0",
+  "description": "simple express app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilias T",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.9.5",
+    "body-parser": "^1.9.0",
+    "locus": "^0.1.0",
+    "request": "^2.45.0",
+    "nodemon": "^1.2.1",
+    "debug": "^2.0.0",
+    "node-inspector": "^0.7.4"
+  }
+}
