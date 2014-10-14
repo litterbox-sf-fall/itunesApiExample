@@ -11,18 +11,20 @@ var request    = require('request');
 // require("locus");
 
 app.get('/api/:term', function(req, res) {
-  request('https://itunes.apple.com/search?term=' + req.params.term, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      apiRes = JSON.parse(body);
-      res.write("<h1>Artist Name: " + apiRes.results[0].artistName + "</h1>");
-      res.write("<h3>Track Name: " + apiRes.results[0].trackName + "</h3>");
-      res.write("<h3>Song Preview: <audio controls src='" + apiRes.results[0].previewUrl + "'></audio></h3>");
-      res.write("<h3>Artwork: <img src='" + apiRes.results[0].artworkUrl100 + "'></h3>");
-      res.send();
-    } else {
-      res.send("API Down");
-    }
-  });
+  console.log(request);
+  debugger;
+  // request('https://itunes.apple.com/search?term=' + req.params.term, function (error, response, body) {
+    // if (!error && response.statusCode == 200) {
+    //   apiRes = JSON.parse(body);
+    //   res.write("<h1>Artist Name: " + apiRes.results[0].artistName + "</h1>");
+    //   res.write("<h3>Track Name: " + apiRes.results[0].trackName + "</h3>");
+    //   res.write("<h3>Song Preview: <audio controls src='" + apiRes.results[0].previewUrl + "'></audio></h3>");
+    //   res.write("<h3>Artwork: <img src='" + apiRes.results[0].artworkUrl100 + "'></h3>");
+    //   res.send();
+    // } else {
+    //   res.send("API Down");
+    // }
+  // });
 });
 
 var server = app.listen(3000, function() {
